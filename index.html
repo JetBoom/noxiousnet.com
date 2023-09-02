@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+
+	<style>
+		:root {
+			--col1: rgb(71, 150, 82);
+			--col2: rgb(106, 225, 123);
+		}
+
+		* {
+			box-sizing:border-box;
+		}
+
+		body {
+			padding: 0;
+			margin: 0;
+			background: #121223;
+			color: #e7faf0;
+			font: 14px 'Open Sans',tahoma,sans-serif;
+			text-rendering: optimizeLegibility;
+		}
+
+		h5 {
+			font-size:20px;
+			margin:0;
+		}
+
+		h4 {
+			font-size:30px;
+			margin:0;
+		}
+
+		h3 {
+			font-size:40px;
+			margin:0.5em 0;
+		}
+
+		p {
+			white-space:pre-line;
+		}
+
+		a, a:active, a:focus {
+			color:var(--col1);
+			text-decoration:none;
+		}
+		a:hover {
+			color:var(--col2);
+			text-decoration:none;
+		}
+
+		*::placeholder {color:#555;}
+		*::input-placeholder {color:#555;}
+		*::-webkit-input-placeholder {color:#555;}
+		*:-ms-input-placeholder {color:#555;}
+		*::-ms-input-placeholder {color:#555;}
+		*::-moz-placeholder {color:#555;}
+
+		#logo {
+			min-width:280px;
+			width:30vw;
+			max-width:720px;
+		}
+
+		main {
+			min-height:100vh;
+		}
+
+		main > div {
+			min-height:100vh;
+			display:flex;
+			align-items:center;
+			justify-content:center;
+			flex-direction:column;
+			padding:1rem;
+		}
+
+		footer, #back {
+			opacity:0.18;
+			position:fixed;
+			bottom:4px;
+			right:4px;
+			font-size:12px;
+			white-space:nowrap;
+			overflow:hidden;
+			text-shadow:0 0 0.5em black;
+		}
+
+		footer:hover, #back:hover {
+			opacity:1;
+		}
+
+		footer div {
+			float:right;
+			padding:2px 4px;
+		}
+
+		#back {
+			left:4px;
+			right:initial;
+		}
+
+		::-webkit-scrollbar {
+			width:8px;
+			height:8px;
+		}
+
+		::-webkit-scrollbar-track {
+			background:#050505;
+		}
+
+		body .scrollbar-inner>.scroll-element .scroll-element_track, body ::-webkit-scrollbar-track {
+			background:transparent;
+		}
+
+		.scrollbar-inner>.scroll-element .scroll-bar, ::-webkit-scrollbar-thumb {
+			border-radius:10px;
+			background:var(--col1);
+			box-shadow:inset 0 0 3px rgba(0, 0, 0, 0.5);
+		}
+
+		.scrollbar-inner>.scroll-element .scroll-bar:hover, ::-webkit-scrollbar-thumb:hover {
+			background:var(--col2);
+		}
+
+		.scrollbar-inner>.scroll-element .scroll-bar:active, ::-webkit-scrollbar-thumb:active {
+			background:var(--col1);
+		}
+
+		::-webkit-scrollbar-button:start, ::-webkit-scrollbar-button:end {
+			display:none;
+		}
+	</style>
+
+	<meta name="description" content="Large gaming community. Hosts many game servers and is the origin of many original mods such as Zombie Survival and Extreme Football Throwdown.">
+    <meta name="keywords" content="noxiousnet, nox, forum, garrysmod, gmod, zombie survival, extreme football, multiplayer tv, awesome strike, team play, mario boxes, sandbox, space station 13, video games, pc games, forum, steam, gamemode, multiplayer, westwood">
+	<link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAABMLAAATCwAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/2epEP9oqRD/aK0Q/2iuEP9qsBD/a7MQ/2mvD/9lqA7/Z6sO/221Dv9ssw7/brYO/222Dv9nrA7/AAAA/wAAAP90vhL/dL4S/3TAEv92whL/eMYS/3vJEv98xhH/e8UQ/4DNEv+G2RP/hdkS/4PVEv9/zxH/e8gP/wAAAP8AAAD/aKsQ/2iqEP9pqxD/a68Q/2yzEf9usRD/bKsQ/2uqD/9rqw//b64P/3G0D/9trQ//aqkP/2yuD/8AAAD/AAAA/2enEP9pqRH/aaoR/2qtEf8sSAf/AAAA/yxHB/9urw//K0QG/wAAAP8uSQb/ba0P/2yrD/9ytA//AAAA/wAAAP9wthH/croS/3O7Ev90vBL/AAAA//////8AAAD/NFUH/wAAAP//////AAAA/4HTEf99zhD/g9cS/wAAAP8AAAD/a7AR/2y0Ef9ttRH/bbYR/wAAAP//////AAAA/wAAAP///////////wAAAP9yvQ//cbsP/3bEEP8AAAD/AAAA/22zEf9vuRH/cLoR/2+5Ef8AAAD//////wAAAP//////AAAA//////8AAAD/bLMP/3C2D/9yuBD/AAAA/wAAAP90wRL/eckT/3jIEv95yhP/AAAA////////////AAAA/wAAAP//////AAAA/3rHEf95wxD/esUQ/wAAAP8AAAD/a68R/2+0Ev9zvBL/dL4S/wAAAP//////AAAA/y5JB/8AAAD//////wAAAP9rrQ//bbEP/26yEP8AAAD/AAAA/2+2Ef9xuBL/cboS/3K6Ev8wTgf/AAAA/y9KB/9wsxH/LEYG/wAAAP8sRgb/ba4P/26vD/9vsQ//AAAA/wAAAP9zvhL/dMER/3bCEv94xhL/fM4S/4DUFP96xxL/eMQS/3K6EP9wtg//dL0Q/3W/EP91vxD/dsEQ/wAAAP8AAAD/dsIS/3fBEv92whL/d8QS/3nHEv96yxL/dL0S/3K4Ef9ssQ//bLAP/2+1D/9vtg//b7UP/2+3D/8AAAD/AAAA/3G8Ev9zwRL/d8cS/3fKEv92yRL/dMES/3O9Ev9vtBH/a64P/2uvD/9usxD/brQQ/260D/9utRD/AAAA/wAAAP9+0RT/hNsU/4zqF/+R8Rj/kPAX/4zpFv97yxP/dr8S/3S8Ef92wBH/eMIR/3jDEf94xBH/eMUR/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//w==" />
+
+	<title>NoXiousNet</title>
+</head>
+
+<body>
+
+<main>
+	<div>
+		<img id="logo" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4wIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA2ODMuOCAyNDMuNyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNjgzLjggMjQzLjc7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQoJLnN0MHtmaWxsOiMyODdGMjg7fQ0KCS5zdDF7ZmlsbDojNDhCNTRCO30NCgkuc3Qye2ZpbGw6IzdGRTU4Njt9DQoJLnN0M3tmaWxsOiMyRjhDMkY7fQ0KCS5zdDR7ZmlsbDojMUQ2MDFEO30NCgkuc3Q1e2ZpbGw6IzcxRDM3MTt9DQo8L3N0eWxlPg0KPGcgaWQ9IlhNTElEXzIyXyI+DQoJPHBhdGggaWQ9IlhNTElEXzQ1XyIgY2xhc3M9InN0MCIgZD0iTTM1NC40LDIyNi44Yy03Mi41LDUzLjUtMTMyLjYtMzMuMS05Mi40LTgzLjljMCwwLDIwLjMtMjIuNSw0Ny45LTI4LjhjMCwwLDEzLjItNC45LDE3LjEtMTYuNg0KCQljMCwwLDUuNi0xMS40LDE1LjItMTQuMWMwLDAtNC43LDE1LjQtMC43LDIxLjFjMCwwLDMuMS02LjcsMTYuNS05LjRjMCwwLDYuMS0wLjIsOS41LTZjMCwwLDQuNS05LjMsOS40LTEwLjdjMCwwLDE0LjQtMy42LDIyLTMuNg0KCQljMCwwLDYuOCwwLjIsNi4xLTExLjljMCwwLTQuNi0yNC42LDE5LjItMzcuN2wzMi45LTIyLjVMNDUxLDQwLjJjMCwwLTExLjItMTAuNy0xNywxNC41YzAsMC00LjQsMTMuMiwyLjQsMTkuNg0KCQljMCwwLTkuNiwzLjYtOS41LDE0LjljMCwwLTI4LjMsOC45LTMwLjYsMjIuMmMwLDAtMS4zLDguMi0wLjgsMTRjMCwwLTguMiwyLjUtMTAuOCw5LjRjMCwwLTIuOCwyMi4yLDI2LjIsMjIuOA0KCQljMCwwLTQuMyw5LjItMTkuNCwxMy4xYzAsMC0yMC42LDgtMjEsMjYuMUMzNzAuMSwyMTQuOSwzNTQuNCwyMjYuOCwzNTQuNCwyMjYuOHoiLz4NCgk8cGF0aCBpZD0iWE1MSURfNDRfIiBjbGFzcz0ic3QxIiBkPSJNMzgwLjEsMTAyLjVjLTAuNywxLjktMS4zLDMuOC0xLjYsNS43bDAsMC4xbDAsMC4xYy0wLjEsMC44LTAuNSwzLjMtMC44LDYuNA0KCQljLTMuOSwzLjEtNy42LDcuNS05LjksMTMuNmwtMC43LDEuOWwtMC4zLDJjLTAuMiwxLjQtMC42LDYuNCwwLjgsMTIuN2MwLjcsMi45LDIuNCw4LjYsNi43LDE0LjNjLTEwLjUsNy4xLTIxLjUsMTkuNC0yMS45LDM3DQoJCWMtMC4yLDguNS04LjQsMTUuNy04LjksMTYuMWMtMTYuOSwxMi41LTMzLjUsMTYuMi00Ny45LDEwLjljLTEzLjQtNS0yMy45LTE3LjYtMjcuNC0zMi45Yy0xLjctNy42LTMtMjIuMSw3LjUtMzUuNw0KCQljMi42LTIuNywxOC41LTE4LjQsMzguMy0yMi45bDEuMS0wLjNsMS4xLTAuNWMxLjMtMC41LDguMy0zLjMsMTUuMy05LjNsMTMuMSwxOS4xbDEyLjItMjYuNmMwLjctMC40LDEuOS0wLjksNC0xLjQNCgkJQzM2Ni44LDExMi4zLDM3NC41LDEwOS4yLDM4MC4xLDEwMi41eiIvPg0KCTxjaXJjbGUgaWQ9IlhNTElEXzQzXyIgY2xhc3M9InN0MiIgY3g9IjMxMC44IiBjeT0iMTgyLjIiIHI9IjM4LjMiLz4NCgk8cGF0aCBpZD0iWE1MSURfNDJfIiBjbGFzcz0ic3QxIiBkPSJNNDE0LjUsMTI4LjFjMCwwLTkuNy0xMi4yLDAuNi0xMC41YzAsMCw4LjUsNSwxNS40LDJDNDMwLjYsMTE5LjYsNDI0LjUsMTI4LjgsNDE0LjUsMTI4LjF6Ii8+DQoJPHBhdGggaWQ9IlhNTElEXzMzXyIgY2xhc3M9InN0MSIgZD0iTTM1OS45LDc0LjFjMCwwLDQuNC0xMC44LDEyLjUtMTIuMWMwLDAtMTYuNC00LjQtMTkuMSw2LjRDMzUzLjMsNjguNCwzNTIuOCw3NS41LDM1OS45LDc0LjF6Ig0KCQkvPg0KCTxwYXRoIGlkPSJYTUxJRF8zMl8iIGNsYXNzPSJzdDMiIGQ9Ik0zODQuNiw1MC42YzAsMCw2LjQtNy45LDYuNC0xNS4yYzAsMC04LjgsNi42LTEzLjcsNi43QzM3Ny4zLDQyLjEsMzc2LjUsNTUuNCwzODQuNiw1MC42eiIvPg0KCTxwYXRoIGlkPSJYTUxJRF8yN18iIGNsYXNzPSJzdDQiIGQ9Ik00MTcuMiw3LjVsMTAuMS02LjdjMCwwLTguOS0yLjgtMTMuOSwyLjJDNDEzLjMsMi45LDQxMS41LDguOCw0MTcuMiw3LjV6Ii8+DQoJPHBhdGggaWQ9IlhNTElEXzI2XyIgY2xhc3M9InN0MyIgZD0iTTQ0Ni4xLDY0LjFjMCwwLDkuMy01LjYsOC40LTE1LjVjMCwwLTguNCwyLjgtMTIuMSw3LjNDNDQyLjQsNTUuOSw0NDMuMSw2Ni41LDQ0Ni4xLDY0LjF6Ii8+DQoJPHBhdGggaWQ9IlhNTElEXzI1XyIgY2xhc3M9InN0NSIgZD0iTTMyNiwyMzQuNWMtMzEsNy4xLTYxLjktMTIuMy02OS00My4zYy0zLjQtMTQuNy0wLjgtMjkuNCw2LjItNDEuNWMtOC43LDEyLjgtMTIuMywyOS04LjYsNDUuMw0KCQljNy4xLDMxLDM4LDUwLjQsNjksNDMuM2MxNi4zLTMuNywyOS40LTE0LDM3LjEtMjcuNEMzNTIuOCwyMjIuNCwzNDAuNywyMzEuMSwzMjYsMjM0LjV6Ii8+DQo8L2c+DQo8cGF0aCBpZD0iWE1MSURfMjBfIiBjbGFzcz0ic3QyIiBkPSJNNjMsMjI1LjdINDcuMWwtMjguOS00NGMtMS43LTIuNi0yLjktNC41LTMuNS01LjhoLTAuMmMwLjMsMi41LDAuNCw2LjMsMC40LDExLjN2MzguNUgwdi03MGgxNw0KCWwyNy44LDQyLjZjMS4zLDEuOSwyLjQsMy44LDMuNSw1LjdoMC4yYy0wLjMtMS42LTAuNC00LjgtMC40LTkuNnYtMzguN0g2M1YyMjUuN3oiLz4NCjxwYXRoIGlkPSJYTUxJRF8xOF8iIGNsYXNzPSJzdDIiIGQ9Ik0yMDkuNSwyMjUuN2gtMTguN2wtMTIuMS0yMi44Yy0wLjUtMC44LTAuOS0yLjQtMS40LTQuN2gtMC4yYy0wLjIsMS4xLTAuOCwyLjctMS42LDQuOQ0KCWwtMTIuMSwyMi42aC0xOC44bDIyLjMtMzVsLTIwLjQtMzVoMTkuMmwxMCwyMWMwLjgsMS43LDEuNSwzLjYsMi4xLDUuOWgwLjJjMC40LTEuNCwxLjEtMy40LDIuMi02LjFsMTEuMS0yMC44aDE3LjZsLTIxLDM0LjcNCglMMjA5LjUsMjI1Ljd6Ii8+DQo8cGF0aCBpZD0iWE1MSURfMTZfIiBjbGFzcz0ic3QyIiBkPSJNMjMzLjYsMjI1LjdoLTE1Ljh2LTcwaDE1LjhWMjI1Ljd6Ii8+DQo8cGF0aCBpZD0iWE1MSURfMTRfIiBjbGFzcz0ic3QyIiBkPSJNNDU2LjYsMjIzdi0xNS42YzIuOCwyLjQsNS45LDQuMiw5LjIsNS4zYzMuMywxLjIsNi43LDEuOCwxMC4xLDEuOGMyLDAsMy43LTAuMiw1LjItMC41DQoJYzEuNS0wLjQsMi43LTAuOSwzLjctMS41YzEtMC42LDEuNy0xLjQsMi4yLTIuMmMwLjUtMC45LDAuNy0xLjgsMC43LTIuOGMwLTEuNC0wLjQtMi42LTEuMi0zLjdzLTEuOC0yLjEtMy4yLTMNCgljLTEuNC0wLjktMy0xLjgtNC44LTIuNmMtMS45LTAuOC0zLjktMS43LTYtMi42Yy01LjUtMi4zLTkuNS01LjEtMTIuMi04LjNjLTIuNy0zLjMtNC03LjMtNC0xMS45YzAtMy42LDAuNy02LjgsMi4yLTkuNA0KCWMxLjUtMi42LDMuNS00LjgsNi02LjVjMi41LTEuNyw1LjQtMi45LDguOC0zLjdjMy4zLTAuOCw2LjgtMS4yLDEwLjUtMS4yYzMuNiwwLDYuOSwwLjIsOS43LDAuN2MyLjgsMC40LDUuNCwxLjEsNy44LDJ2MTQuNg0KCWMtMS4yLTAuOC0yLjUtMS41LTMuOC0yLjFjLTEuNC0wLjYtMi44LTEuMS00LjMtMS41Yy0xLjUtMC40LTIuOS0wLjctNC40LTAuOWMtMS40LTAuMi0yLjgtMC4zLTQuMS0wLjNjLTEuOCwwLTMuNCwwLjItNC45LDAuNQ0KCXMtMi43LDAuOC0zLjcsMS40Yy0xLDAuNi0xLjgsMS40LTIuMywyLjJjLTAuNiwwLjktMC44LDEuOC0wLjgsMi45YzAsMS4yLDAuMywyLjIsMC45LDMuMWMwLjYsMC45LDEuNSwxLjgsMi42LDIuNg0KCWMxLjEsMC44LDIuNSwxLjYsNC4yLDIuNGMxLjYsMC44LDMuNSwxLjYsNS41LDIuNWMyLjgsMS4yLDUuMywyLjQsNy41LDMuN2MyLjIsMS4zLDQuMSwyLjgsNS43LDQuNWMxLjYsMS43LDIuOCwzLjYsMy43LDUuNw0KCWMwLjgsMi4xLDEuMyw0LjYsMS4zLDcuNGMwLDMuOS0wLjcsNy4yLTIuMiw5LjhjLTEuNSwyLjctMy41LDQuOC02LDYuNGMtMi41LDEuNi01LjUsMi44LTguOSwzLjVzLTYuOSwxLjEtMTAuNywxLjENCgljLTMuOCwwLTcuNS0wLjMtMTEtMVM0NTkuMSwyMjQuMyw0NTYuNiwyMjN6Ii8+DQo8cGF0aCBpZD0iWE1MSURfMTFfIiBjbGFzcz0ic3QyIiBkPSJNNTczLjUsMjI1LjdoLTEwLjFsLTM2LTU1LjhjLTAuOS0xLjQtMS43LTIuOS0yLjItNC40aC0wLjNjMC4zLDEuNSwwLjQsNC43LDAuNCw5LjZ2NTAuNkg1MTcNCgl2LTcwaDEwLjZsMzUuMSw1NC45YzEuNSwyLjMsMi40LDMuOCwyLjgsNC43aDAuMmMtMC4zLTItMC41LTUuNS0wLjUtMTAuM3YtNDkuM2g4LjJWMjI1Ljd6Ii8+DQo8cGF0aCBpZD0iWE1MSURfOV8iIGNsYXNzPSJzdDIiIGQ9Ik02MjksMjI1LjdoLTM3LjF2LTcwaDM1LjV2Ny40SDYwMHYyMy4zaDI1LjN2Ny40SDYwMHYyNC41SDYyOVYyMjUuN3oiLz4NCjxwYXRoIGlkPSJYTUxJRF83XyIgY2xhc3M9InN0MiIgZD0iTTY4My44LDE2My4xaC0yMC4ydjYyLjZoLTguMnYtNjIuNmgtMjAuMnYtNy40aDQ4LjZWMTYzLjF6Ii8+DQo8cGF0aCBpZD0iWE1MSURfNl8iIGNsYXNzPSJzdDIiIGQ9Ik00MjkuNCwxOTYuOWMwLDEwLjktNC43LDE2LjQtMTMuNCwxNi40Yy04LjksMC0xMy42LTUuNy0xMy42LTE3di0yMS4yYy0yLDEuMi00LjksMi4yLTguMSwzLjENCgljLTEsMC40LTMuOSwxLjktNi45LDQuNHYxMy41YzAsMjAuNSw5LjUsMzAuOCwyOC42LDMwLjhjMTkuNiwwLDI5LjQtMTAuNSwyOS40LTMxLjV2LTQwaC0xNlYxOTYuOXoiLz4NCjxwYXRoIGlkPSJYTUxJRF80N18iIGNsYXNzPSJzdDIiIGQ9Ik0xMzQsMTY0LjNjLTQuOS01LjItMTAuOS04LjMtMTguMi05LjRjNy45LDYuMywxMywxNiwxMywyNi45YzAsMTkuMS0xNS40LDM0LjUtMzQuNSwzNC41DQoJYy00LjUsMC04LjktMC45LTEyLjktMi41YzAuOCwxLjEsMS43LDIuMiwyLjcsMy4yYzYuMyw2LjUsMTQuNSw5LjgsMjQuNSw5LjhjMTAuMywwLDE4LjYtMy40LDI1LTEwLjFzOS42LTE1LjYsOS42LTI2LjYNCglDMTQzLjIsMTc5LjUsMTQwLjEsMTcwLjksMTM0LDE2NC4zeiIvPg0KPC9zdmc+DQo=" />
+	
+		<div class="center" style="max-width:800px;">
+			<p style="text-align: justify;">It's been 12 years since this place was made to host "advanced fortwars". Quite literally millions of people have visited and thousands have stayed for years. Billions of hours of playtime have been put in to my creations and hundreds of people have contributed in some way. Although I stopped personally developing years ago, people still found enjoyment in their own servers and spinoffs and the work of those left to keep it afloat.
+	
+			To keep things simple, the last remaining developers have left after taking code they do not fully own, I do not have the interest or drive to work on something so ancient, and don't see the point in constricting the game to be ran one group of people. Effective immediately, all servers are being taken down, and the complete source code will be made public.
+	
+			The fully updated code for <a href="https://github.com/JetBoom/zombiesurvival" target="_blank">Zombie Survival</a> is available for everyone as well as any other <a href="https://github.com/JetBoom" target="_blank">previously private repositories</a>. Support will be limited. Pull requests will still be looked at and I'll consider anyone who wants to be given repository collaborator status. The nox core code and the website will be released at a later date. All personal and player data will be destroyed.
+	
+			If you want to leave comments or ask questions, you can do so on the <a href="https://steamcommunity.com/groups/noxiousnet" target="_blank">Steam group</a> or PM/e-mail/Steam <a href="https://steamcommunity.com/id/jetboom/" target="_blank">message me</a>. The <a href="//forum.noxiousnet.com" target="_blank">forums</a> will remain up in read-only mode for reference purposes. The <a href="/mumble" target="_blank">Mumble</a> will remain open for as long as it is in use. If you want to see some nostolgia, check out the old <a href="http://heavy.noxiousnet.com/img" target="_blank">img dump</a>.
+	
+			It might return some day, either to host different games or in a different form but for now it's time to put it to rest.
+	
+			<b>RIP NoXiousNet 2006 - 2018</b></p>
+		</div>
+	</div>
+</main>
+
+<footer>
+	<div>&copy; <b><a href="http://github.com/JetBoom" target="_blank">William Moodhe</a></b></div>
+</footer>
+
+</body>
+</html>
